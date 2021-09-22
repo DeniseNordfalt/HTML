@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>
+Javascript Frontend lektion 5
+</title>
+<meta charset="UTF-8">
+
+<script>
+let greeting = "Hello"
+console.log(greeting)
+
+function ourFunction(){
+    console.log("On click")
+    console.log(document.getElementById("demo").innerHTML = "Du har klickat på en rubrik")
+
+    const parent = document.getElementById("demo")
+    const child = document.createElement("p")
+    child.innerHTML = "Magiskt skapad text"
+    parent.appendChild(child)
+    
+}
+
+function onHover(){
+    console.log("On hover")
+}
+</script>
+</head>
+
+<body>
+    <h1 onmouseover="onHover()" onclick="ourFunction()">Hello world!</h1>
+    <p id="demo">
+    </p>
+    <p>
+        Hej allesammans!
+    </p>
+    <a href="#form">Länk till formulär</a>
+    <h2>En underrubrik</h2>
+    <h3>En rubrik på nivår 3</h3>
+    <h4>En rubrik på nivå 4</h4>
+    <h5>En rubrik på nivå 5</h5>
+    <h6>En rubrik på nivå 6</h6>
+
+    <p>Jag håller på att <i>lära</i> mig <b>HTML</b> <br />
+         <hr /> <!--gör ett streck mellan sektionerna -->
+        och även lite Javascript. 
+    
+
+    <a href="https://www.google.se" target="_blank">Just google it</a>
+    <br>
+    <img src="https://media4.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif?cid=ecf05e47n065zl0bfykw5kpm7vidw33p20ymorf7br67wdj3&rid=giphy.gif&ct=g " 
+    alt="cute grey kitten getting tickled"> 
+    </p>
+
+    <form>
+        <div>
+        <label for="firstName">Fyll i ditt förnamn</label>
+        <input id="firstName" placeholder="Denise" type="text" name="first-name">
+        </div>
+        <div>
+        <label for="lastName">Fyll i ditt efternamn</label>
+        <input id="lastName" type="text" name="last-name"> 
+        </div>
+
+        <div>
+            <label for="phone">Telefonnummer</label>
+            <input id="phone" name="phone" type="tel">
+        </div>
+        <div>
+            <label for="password">Lösenord</label>
+            <input id="password" name="password" type="password">
+        </div>
+        <div>
+            <label for="date">Datum</label>
+            <input id="date" name="date" type="date">
+        </div>
+
+        <div>
+        <label for="cars">Välj din bil</label>
+        <select name="cars" id="cars">
+            <option value="1">Volvo</option>
+            <option value="2" selected>Saab</option>
+            <option value="3">Audi</option>
+        </select>
+        </div>
+
+        <label for="fruits">Välj dina favoritfrukter</label>
+        <select name="fruits" id="fruits" multiple>
+            <option value="1">Äpple</option>
+            <option value="2">Banan</option>
+            <option value="3">Mango</option>
+            <option value="4">Tomat</option>
+        </select>
+        </div>
+
+        <div>
+            <label for="lefestory">Din livshistoria</label>
+            <textarea name="lifestory" id="lifestory" cols="50" rows="10">
+
+            </textarea>
+        </div>
+
+        <button type="submit">Skicka in</button>
+        <button type="reset">Nollställ</button>
+    </form>
+
+</body>
+
+
+</html>
